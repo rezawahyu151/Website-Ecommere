@@ -1,0 +1,645 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 200vh;
+    background: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: #000;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.black {
+    background: #fff;
+    height: 50px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    color: #000;
+}
+
+header ul li a:after {
+    content: "";
+    position: absolute;
+    background-color: #dffc03;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+
+}
+
+header ul li a:hover::after {
+    width: 100%;
+
+}
+
+.fast {
+    margin-top: 130px;
+    text-align: center;
+    background-color: #333333;
+    height: 50px;
+}
+
+.fast p {
+    padding-top: 13px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.produkct {
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}
+
+.produkct .studio img {
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+.produkct .studio p {
+    padding-top: 13px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.produkct .wireless img {
+    margin-left: 50px;
+    width: 30px;
+    height: 30px;
+}
+
+.produkct .wireless p {
+    margin-left: 40px;
+    padding-top: 13px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.produkearbuds h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.produkearbuds .produk1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.produkearbuds .produk1 img {
+    margin-top: 50px;
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+
+
+.produkearbuds .produk1 .text h4 {
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+.produkearbuds .produk1 .text h2 {
+    margin-top: 5px;
+    margin-left: -95px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.produkearbuds .produk1 p {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: black;
+}
+
+.produkearbuds .produk1 ul li {
+    margin-top: 5px;
+    line-height: 25px;
+    margin-left: 140px;
+    font-size: large;
+    color: black;
+}
+
+.button1 {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e82b7a;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.produkearbuds1 h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.produkearbuds1 .produkk {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    padding-bottom: 70px;
+}
+
+.produkearbuds1 .produkk img {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+
+.produkearbuds1 .produkk .text h4 {
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+.produkearbuds1 .produkk .text h2 {
+    margin-top: 5px;
+    margin-left: -15px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.produkearbuds1 .produkk p {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: black;
+}
+
+.produkearbuds1 .produkk ul li {
+    margin-top: 5px;
+    line-height: 25px;
+    margin-left: 140px;
+    font-size: large;
+    color: black;
+}
+
+/* sty/ */
+.produkearbuds3 h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.produkearbuds3 .produk1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.produkearbuds3 .produk1 img {
+    margin-top: 100px;
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+
+
+.produkearbuds3 .produk1 .text h4 {
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+.produkearbuds3 .produk1 .text h2 {
+    margin-top: 15px;
+    margin-left: -2px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.produkearbuds3 .produk1 p {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: black;
+}
+
+.produkearbuds3 .produk1 ul li {
+    margin-top: 5px;
+    line-height: 25px;
+    margin-left: 140px;
+    font-size: large;
+    color: black;
+}
+
+/* P */
+.produkearbuds4 h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.produkearbuds4 .produk1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.produkearbuds4 .produk1 img {
+    margin-top: 100px;
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+
+
+.produkearbuds4 .produk1 .text h4 {
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+.produkearbuds4 .produk1 .text h2 {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.produkearbuds4 .produk1 p {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: black;
+}
+
+.produkearbuds4 .produk1 ul li {
+    margin-top: 5px;
+    line-height: 25px;
+    margin-left: 140px;
+    font-size: large;
+    color: black;
+}
+
+/* p5 */
+.produkearbuds5 h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.produkearbuds5 .produk1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.produkearbuds5 .produk1 img {
+    width: 500px;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+
+
+.produkearbuds5 .produk1 .text h4 {
+    margin-top: 120px;
+    margin-left: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+.produkearbuds5 .produk1 .text h2 {
+    margin-top: 15px;
+    margin-left: -70px;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.produkearbuds5 .produk1 p {
+    margin-top: 5px;
+    margin-left: 120px;
+    font-size: 20px;
+    color: black;
+}
+
+.produkearbuds5 .produk1 ul li {
+    margin-top: 5px;
+    line-height: 25px;
+    margin-left: 140px;
+    font-size: large;
+    color: black;
+}
+
+
+.footer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    height: 350px;
+    color: #000;
+}
+
+.produk ul {
+    margin-top: 100px;
+    margin-left: 130px;
+
+}
+
+.produk ul li {
+    position: relative;
+    list-style: none;
+
+}
+
+.produk ul li a {
+    line-height: 1.5em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    color: #000;
+}
+
+.footer .produk2 {
+    margin-left: -260px;
+
+}
+
+.produk2 ul {
+    margin-top: 100px;
+    margin-left: 350px;
+
+}
+
+.produk2 ul li {
+    position: relative;
+    list-style: none;
+
+}
+
+.produk2 ul li a {
+    line-height: 1.5em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    color: #000;
+}
+
+.footer .produk3 {
+    margin-left: -260px;
+
+}
+
+.produk3 ul {
+    margin-top: 100px;
+    margin-left: 350px;
+
+}
+
+.produk3 ul li {
+    position: relative;
+    list-style: none;
+
+}
+
+.produk3 ul li a {
+    line-height: 1.5em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    color: #000;
+}
+
+.footer .produk4 {
+    margin-left: -260px;
+
+}
+
+.produk4 ul {
+    margin-top: 100px;
+    margin-left: 350px;
+
+}
+
+.produk4 ul li {
+    position: relative;
+    list-style: none;
+
+}
+
+.produk4 ul li a {
+    line-height: 1.5em;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-weight: 500px;
+    transition: 0.6s;
+    color: #000;
+}
+
+.footer .produk a:after {
+    content: "";
+    position: absolute;
+    background-color: #f6a7c8;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 1px;
+    transition: 0.3s;
+
+}
+
+.footer .produk a:hover::after {
+    width: 100%;
+
+}
+
+.footer .produk2 a:after {
+    content: "";
+    position: absolute;
+    background-color: #f6a7c8;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 1px;
+    transition: 0.3s;
+
+}
+
+.footer .produk2 a:hover::after {
+    width: 100%;
+
+}
+
+.footer .produk3 a:after {
+    content: "";
+    position: absolute;
+    background-color: #f6a7c8;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 1px;
+    transition: 0.3s;
+
+}
+
+.footer .produk3 a:hover::after {
+    width: 100%;
+
+}
+
+.footer .produk4 a:after {
+    content: "";
+    position: absolute;
+    background-color: #f6a7c8;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 1px;
+    transition: 0.3s;
+
+}
+
+.footer .produk4 a:hover::after {
+    width: 100%;
+
+}
+
+footer {
+    padding-top: 100px;
+    background: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: small;
+}
